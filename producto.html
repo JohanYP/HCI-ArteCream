@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title id="page-title">Detalle del Helado | ARTECREAM</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#a9b443",
+            "surface-bright": "#fff8f6",
+            "surface-container": "#ffe9e5",
+            "primary-fixed-dim": "#ffb2bf",
+            "on-primary-container": "#ff88a2",
+            "error-container": "#ffdad6",
+            "background": "#fff8f6",
+            "tertiary-fixed-dim": "#c3ce5b",
+            "on-tertiary-fixed": "#1a1d00",
+            "on-tertiary-fixed-variant": "#444b00",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#fff0ee",
+            "tertiary-fixed": "#dfeb74",
+            "on-surface-variant": "#554245",
+            "error": "#ba1a1a",
+            "surface": "#fff8f6",
+            "surface-container-highest": "#f8dcd7",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#633000",
+            "on-background": "#271815",
+            "tertiary-container": "#3e4400",
+            "primary-fixed": "#ffd9de",
+            "on-surface": "#271815",
+            "surface-dim": "#f0d4cf",
+            "outline": "#887175",
+            "tertiary": "#292d00",
+            "inverse-surface": "#3d2c29",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "surface-variant": "#f8dcd7",
+            "on-secondary-fixed": "#301400",
+            "inverse-primary": "#ffb2bf",
+            "secondary-fixed-dim": "#ffb784",
+            "primary-container": "#7a1b38",
+            "outline-variant": "#dbc0c3",
+            "on-primary": "#ffffff",
+            "secondary": "#944a00",
+            "surface-container-high": "#fee2dd",
+            "primary": "#5b0023",
+            "surface-tint": "#a13a55",
+            "on-primary-fixed": "#3f0016",
+            "secondary-container": "#fd8b27",
+            "on-secondary-fixed-variant": "#713700",
+            "inverse-on-surface": "#ffede9",
+            "on-primary-fixed-variant": "#82223e",
+            "secondary-fixed": "#ffdcc5",
+            "on-secondary": "#ffffff",
+            "flavor-bocadillo": "#8e382b",
+            "flavor-lulo": "#8c9628",
+            "flavor-mora": "#7a1b38",
+            "flavor-maracuya": "#e87b14"
+          },
+          boxShadow: {
+            "elevation-1": "0 4px 20px -2px rgba(42,27,24,0.05), 0 1px 3px 0 rgba(42,27,24,0.03)",
+            "elevation-2": "0 12px 32px -4px rgba(42,27,24,0.08), 0 2px 6px -1px rgba(42,27,24,0.04)",
+            "elevation-3": "0 24px 48px -12px rgba(42,27,24,0.16)",
+            "elevation-hover": "0 16px 32px -4px rgba(42,27,24,0.12)"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "md": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "2xl": "1.25rem",
+            "3xl": "1.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin": "3rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem"
+          },
+          fontFamily: {
+            serif: ["EB Garamond", "serif"],
+            sans: ["Montserrat", "sans-serif"],
+            body: ["Montserrat", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface font-sans antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+
+  <!-- Single Global Header / Navigation Bar (Identical to Landing Page) -->
+  <header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md border-b border-on-surface/10 shadow-elevation-1 transition-colors">
+    <div class="h-20 w-full px-gutter-mobile md:px-gutter lg:px-margin flex items-center justify-between gap-3 sm:gap-space-md">
+      
+      <!-- Brand Logo & Name (ARTECREAM in EB Garamond) -->
+      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <!-- Artisanal Brand Icon -->
+        <a href="index.html" class="flex items-center gap-2.5 group" aria-label="Inicio ARTECREAM">
+          <img src="brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
+          <span class="font-serif text-2xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">ARTECREAM</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links (Montserrat) -->
+      <nav class="hidden lg:flex items-center gap-space-lg font-sans text-sm font-semibold">
+        <a class="text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/50 pb-1 border-b-2 border-transparent transition-all" data-path="inicio" href="index.html">Inicio</a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors" data-path="sabores" href="index.html#sabores">Sabores</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button aria-label="Abrir menú" class="lg:hidden w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors shrink-0 p-1.5" id="menu-toggle" onclick="toggleMobileMenu()" type="button" aria-expanded="false">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
+      </button>
+
+      <!-- Right Action Items: User Profile & Vinotinto Shopping Bag -->
+      <div class="flex items-center gap-1 sm:gap-space-md shrink-0">
+        <button aria-label="Perfil de usuario" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors shrink-0 p-1.5" type="button">
+          <span class="material-symbols-outlined text-[24px]">person</span>
+        </button>
+        <!-- Shopping Bag in Vinotinto (#5b0023 / text-primary) -->
+        <a aria-label="Bolsa de compras" class="relative w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" data-path="pedidos" href="index.html#sabores">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span id="cart-counter" class="absolute -top-1 -right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-on-primary font-sans text-[11px] font-bold shadow-sm transition-transform duration-200">0</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu (Montserrat) -->
+    <nav id="mobile-menu" class="lg:hidden hidden flex flex-col gap-1 px-gutter-mobile md:px-gutter pt-2 pb-4 bg-surface/95 backdrop-blur-md border-t border-on-surface/10 shadow-elevation-2 font-sans" aria-label="Menú principal">
+      <a class="rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="inicio" href="index.html">Inicio</a>
+      <a class="rounded-xl px-4 py-3 text-sm font-bold bg-primary-container text-on-primary transition-colors" data-path="sabores" href="index.html#sabores">Sabores</a>
+    </nav>
+  </header>
+
+  <!-- Main Individual Product Section: Compact Top Margin so Full Info Fits Without Scrolling -->
+  <main class="flex-1 w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter lg:px-margin pt-24 sm:pt-28 pb-12 font-sans">
+    
+    <!-- Compact Breadcrumbs -->
+    <nav class="flex items-center gap-1.5 text-xs text-on-surface-variant mb-4 font-sans" aria-label="Ruta de navegación">
+      <a href="index.html" class="hover:text-primary transition-colors">Inicio</a>
+      <span>/</span>
+      <a href="index.html#sabores" class="hover:text-primary transition-colors">Sabores</a>
+      <span>/</span>
+      <span id="breadcrumb-title" class="font-bold text-on-surface">Detalle</span>
+    </nav>
+
+    <!-- Product Layout Grid: Engineered with 4:5 portrait image (increased width, same length) and Montserrat typography -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+      
+      <!-- Left Column: Product Image in 4:5 Format with Rounded Borders -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-start">
+        <div class="relative w-full max-w-[390px] sm:max-w-[420px] aspect-[4/5] bg-surface-container-low rounded-3xl overflow-hidden shadow-elevation-2 border border-on-surface/5">
+          <img id="flavor-image" src="" alt="Helado artesanal" class="w-full h-full object-cover object-center rounded-3xl">
+        </div>
+      </div>
+
+      <!-- Right Column: Details, Montserrat Headline, Price, Stepper, Add to Cart, Description Below -->
+      <div class="lg:col-span-7 flex flex-col justify-center space-y-5 font-sans">
+        
+        <!-- Large Title in Montserrat -->
+        <div class="space-y-1">
+          <h1 id="flavor-title" class="font-sans text-3xl sm:text-4xl lg:text-[44px] font-bold text-on-surface tracking-tight leading-tight">
+            <!-- Loaded dynamically -->
+          </h1>
+          <p id="flavor-price" class="font-sans text-2xl sm:text-3xl font-bold text-primary pt-1">
+            <!-- Loaded dynamically -->
+          </p>
+        </div>
+
+        <!-- Stepper and Add to Cart Button -->
+        <div class="flex flex-row items-center gap-3 pt-1 pb-1">
+          <!-- Quantity Stepper -->
+          <div class="inline-flex items-center justify-between border border-outline-variant/60 rounded-xl p-1 bg-surface-container-low w-36 shrink-0">
+            <button type="button" class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary flex items-center justify-center font-bold transition-colors shadow-xs" onclick="changeQuantity(-1)" aria-label="Disminuir unidades">
+              <span class="material-symbols-outlined text-[18px]">remove</span>
+            </button>
+            <span id="product-quantity" class="font-sans font-bold text-base px-3 text-on-surface min-w-[32px] text-center">1</span>
+            <button type="button" class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary flex items-center justify-center font-bold transition-colors shadow-xs" onclick="changeQuantity(1)" aria-label="Aumentar unidades">
+              <span class="material-symbols-outlined text-[18px]">add</span>
+            </button>
+          </div>
+
+          <!-- Add to Cart Button: Square with rounded corners (rounded-xl) in Montserrat -->
+          <button id="add-to-cart-btn" class="flex-1 inline-flex items-center justify-center gap-2.5 bg-primary hover:bg-primary-container text-on-primary font-sans font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md hover:scale-[1.02] active:scale-95 transition-all duration-200" onclick="submitOrder()" type="button">
+            <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+            <span>Añadir a la cesta</span>
+          </button>
+        </div>
+
+        <!-- Description Below (Montserrat) -->
+        <div class="pt-4 border-t border-on-surface/10 space-y-2 font-sans">
+          <h2 class="text-xs uppercase font-bold tracking-wider text-on-surface-variant font-sans">Descripción del producto</h2>
+          <p id="flavor-description" class="font-sans text-sm sm:text-base text-on-surface-variant leading-relaxed">
+            <!-- Loaded dynamically -->
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Otros Sabores de Autor: Exact same elongated vertical cards as the landing page -->
+    <section class="mt-16 sm:mt-20 pt-10 border-t border-on-surface/10 font-sans">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-sans text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">Otros Sabores de Autor</h2>
+        <a href="index.html#sabores" class="font-sans text-sm font-semibold text-primary hover:underline">Ver carta completa</a>
+      </div>
+      
+      <!-- Elongated Cards Grid (Identical aspect to the landing page) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10" id="other-flavors-grid">
+        <!-- Rendered dynamically with elongated layout -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Quick Toast Feedback for Cart Addition -->
+  <div class="fixed bottom-6 right-6 left-6 sm:left-auto z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none max-w-sm w-full sm:w-auto bg-inverse-surface text-inverse-on-surface p-space-md rounded-2xl shadow-2xl flex items-center gap-space-sm font-sans" id="cart-toast">
+    <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">check</span>
+    </div>
+    <div class="flex-1 min-w-0 font-sans">
+      <p class="font-sans text-sm font-bold truncate text-inverse-on-surface" id="toast-title">Helado agregado</p>
+      <p class="font-sans text-xs text-inverse-on-surface/80" id="toast-desc">Empacado para despacho fresco.</p>
+    </div>
+  </div>
+
+  <!-- Minimalist Footer (Strictly legal & copyright text) -->
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface font-sans py-8 border-t border-on-surface/10 mt-auto">
+    <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter lg:px-margin flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-inverse-on-surface/70 font-sans">
+      <p>© 2025 ARTECREAM Helados Artesanales de Autor. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-inverse-on-surface transition-colors" data-path="privacidad" href="#">Política de Privacidad</a>
+        <a class="hover:text-inverse-on-surface transition-colors" data-path="terminos" href="#">Términos de Servicio</a>
+        <a class="hover:text-inverse-on-surface transition-colors" data-path="registro-sanitario" href="#">Certificación Invima</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const FLAVORS_CATALOG = {
+      'queso-bocadillo': {
+        name: 'Queso con bocadillo',
+        price: 8500,
+        priceFormatted: '$8.500 COP',
+        img: 'flavor-queso-bocadillo.png',
+        desc: 'Cremosa base láctea elaborada con leche de pastoreo sostenible y queso campesino fresco de Santander, veteada generosamente con trozos de auténtico bocadillo veleño de guayaba roja. El contraste perfecto entre notas dulces acarameladas y el toque lácteo salino tradicional.'
+      },
+      'lulo': {
+        name: 'Lulo',
+        price: 8000,
+        priceFormatted: '$8.000 COP',
+        img: 'flavor-lulo.png',
+        desc: 'Puro sorbete artesanal a base de pulpa fresca de lulos silvestres cosechados en el Pacífico chocoano. Su perfil intensamente cítrico y refrescante equilibra la acidez viva de la fruta con notas herbales y una textura ligera que limpia el paladar.'
+      },
+      'mora': {
+        name: 'Mora',
+        price: 8000,
+        priceFormatted: '$8.000 COP',
+        img: 'flavor-mora.jpg',
+        desc: 'Reducción artesanal a fuego lento de moras de Castilla cosechadas en altura en los campos de Boyacá. Posee una untuosidad sedosa inconfundible, color rubí oscuro y un sabor profundo con notas a frutos del bosque silvestres.'
+      },
+      'maracuya': {
+        name: 'Maracuyá',
+        price: 8000,
+        priceFormatted: '$8.000 COP',
+        img: 'flavor-maracuya.jpg',
+        desc: 'Elaborado con maracuyá madurado bajo el sol del Eje Cafetero, conservando sus semillas crujientes para una experiencia multisensorial. Aromático, chispeante y con el balance exacto entre acidez tropical y frescura revitalizante.'
+      }
+    };
+
+    let selectedFlavorId = 'queso-bocadillo';
+    let currentQty = 1;
+    let cartTotalItems = 0;
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function initPage() {
+      const paramId = getQueryParam('id') || getQueryParam('sabor') || 'queso-bocadillo';
+      if (FLAVORS_CATALOG[paramId]) {
+        selectedFlavorId = paramId;
+      }
+
+      const flavor = FLAVORS_CATALOG[selectedFlavorId];
+      document.title = flavor.name + ' | ARTECREAM';
+      document.getElementById('page-title').textContent = flavor.name + ' | ARTECREAM';
+      document.getElementById('breadcrumb-title').textContent = flavor.name;
+      document.getElementById('flavor-title').textContent = flavor.name;
+      document.getElementById('flavor-price').textContent = flavor.priceFormatted;
+      document.getElementById('flavor-description').textContent = flavor.desc;
+      
+      const imgEl = document.getElementById('flavor-image');
+      imgEl.src = flavor.img;
+      imgEl.alt = 'Helado artesanal ' + flavor.name;
+
+      renderOtherFlavors();
+    }
+
+    // Render Other Flavors with the exact elongated aspect of the landing page
+    function renderOtherFlavors() {
+      const grid = document.getElementById('other-flavors-grid');
+      grid.innerHTML = '';
+
+      Object.keys(FLAVORS_CATALOG).forEach(key => {
+        if (key === selectedFlavorId) return;
+        const item = FLAVORS_CATALOG[key];
+
+        const card = document.createElement('a');
+        card.href = 'producto.html?id=' + key;
+        card.className = 'flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 hover:-translate-y-1.5 h-full cursor-pointer';
+        card.setAttribute('aria-label', 'Ver descripción de ' + item.name);
+        card.innerHTML = `
+          <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
+            <img src="${item.img}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl">
+          </div>
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
+            <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
+              <h3 class="font-sans text-xl sm:text-2xl font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">
+                ${item.name}
+              </h3>
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-on-surface/5 mt-auto">
+              <div>
+                <span class="font-sans text-xl font-bold text-on-surface">${item.priceFormatted}</span>
+              </div>
+              <!-- Square cart button with rounded borders -->
+              <button class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:scale-105 active:scale-95 transition-all duration-200" onclick="event.preventDefault(); event.stopPropagation(); addOtherToCart('${item.name}', ${item.price});" title="Agregar al pedido" type="button">
+                <span class="material-symbols-outlined text-[22px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('menu-toggle');
+      if (!menu || !btn) return;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isOpen = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      if (icon) icon.textContent = isOpen ? 'menu' : 'close';
+    }
+
+    function changeQuantity(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('product-quantity').textContent = currentQty;
+    }
+
+    let toastTimer;
+    function showToast(titleText, descText) {
+      const toast = document.getElementById('cart-toast');
+      const title = document.getElementById('toast-title');
+      const desc = document.getElementById('toast-desc');
+
+      if (title) title.textContent = titleText;
+      if (desc) desc.textContent = descText;
+
+      if (toast) {
+        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 3200);
+      }
+    }
+
+    function updateCartCounter(addedQty) {
+      cartTotalItems += addedQty;
+      const cartCounter = document.getElementById('cart-counter');
+      if (cartCounter) {
+        cartCounter.textContent = cartTotalItems;
+        cartCounter.classList.remove('scale-0');
+        cartCounter.classList.add('scale-100');
+      }
+    }
+
+    function submitOrder() {
+      const flavor = FLAVORS_CATALOG[selectedFlavorId];
+      const totalPrice = flavor.price * currentQty;
+      updateCartCounter(currentQty);
+      showToast(
+        `${flavor.name} (${currentQty} un.)`,
+        '$' + totalPrice.toLocaleString('es-CO') + ' COP añadido a la cesta.'
+      );
+    }
+
+    function addOtherToCart(name, price) {
+      updateCartCounter(1);
+      showToast(
+        name,
+        '$' + price.toLocaleString('es-CO') + ' COP añadido a la cesta.'
+      );
+    }
+
+    window.addEventListener('DOMContentLoaded', initPage);
+  </script>
+</body>
+</html>
