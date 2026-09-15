@@ -1,1 +1,56 @@
-@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } }
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Responsive anchor scroll margin to avoid fixed header overlap */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 1024px) {
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* Touch optimization to eliminate delay & tap highlights */
+.touch-device * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent image dragging on touchscreens */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Elegant scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fff8f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #dbc0c3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #887175;
+}
