@@ -163,26 +163,26 @@
     <div class="flex flex-col w-full">
 
       <!-- Hero Section (UN SABOR QUE SE QUEDA in EB Garamond & Vinotinto, lifted 30px, square button in Montserrat) -->
-      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] overflow-hidden bg-surface-container-low flex items-center">
+      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] overflow-hidden bg-surface-container-low flex items-center">
         <div class="absolute inset-0 pointer-events-none z-0">
           <img src="Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center">
         </div>
         <div class="absolute inset-0 z-10 flex items-center px-gutter-mobile md:px-gutter lg:px-margin">
           <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
             
-            <!-- Hero Headline Block: Lifted 30px with -translate-y-[30px] -->
-            <div class="lg:col-span-7 flex flex-col items-start space-y-space-md -translate-y-[30px]">
+            <!-- Hero Headline Block: Lifted on desktop, balanced on mobile -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-space-md -translate-y-4 sm:-translate-y-[30px]">
               
               <!-- Title: 100% in EB Garamond and Vinotinto (#5b0023 / text-primary) -->
-              <h1 class="font-serif text-display-lg lg:text-[64px] font-bold tracking-tight text-primary leading-[1.06]">
-                <span class="block text-display-lg lg:text-[64px] font-bold leading-none text-primary">UN SABOR</span>
-                <span class="block text-display-lg lg:text-[64px] font-bold leading-none -mt-2 text-primary">QUE SE&nbsp;</span>
-                <span class="block text-display-lg lg:text-[64px] font-bold leading-none -mt-1 text-primary">QUEDA</span>
+              <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight text-primary leading-[1.04]">
+                <span class="block font-bold leading-none text-primary">UN SABOR</span>
+                <span class="block font-bold leading-none -mt-1 sm:-mt-2 text-primary">QUE SE&nbsp;</span>
+                <span class="block font-bold leading-none -mt-0.5 sm:-mt-1 text-primary">QUEDA</span>
               </h1>
 
               <!-- Explorar Sabores Button: Square with rounded borders (rounded-xl), no background (bg-transparent), Montserrat font -->
               <div class="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
-                <a class="inline-flex items-center justify-center gap-space-xs border border-primary text-primary hover:bg-primary hover:text-on-primary px-8 py-3.5 rounded-xl bg-transparent font-sans text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm" href="#sabores">
+                <a class="inline-flex items-center justify-center gap-space-xs border border-primary text-primary hover:bg-primary hover:text-on-primary px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-transparent font-sans text-sm sm:text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm" href="#sabores">
                   <span>Explorar Sabores</span>
                   <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
                 </a>
@@ -195,11 +195,11 @@
       </section>
 
       <!-- Minimalist Sabores Grid Section: Spacious, Airy, and Free (Generous Padding & Gaps) -->
-      <section class="w-full bg-surface px-gutter-mobile md:px-gutter lg:px-margin py-28 sm:py-32 lg:py-40" id="sabores">
+      <section class="w-full bg-surface px-gutter-mobile md:px-gutter lg:px-margin py-16 sm:py-24 lg:py-36" id="sabores">
         <div class="max-w-7xl mx-auto">
           
           <!-- Product Cards Grid: Airy, Relaxed Spacing, Elevated Aesthetics (Montserrat) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 xl:gap-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12">
 
             <!-- Helado 1: Queso con bocadillo -->
             <a href="producto.html?id=queso-bocadillo" class="flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 cursor-pointer hover:-translate-y-1.5 h-full" aria-label="Ver descripción de Queso con bocadillo">
@@ -297,149 +297,29 @@
         </div>
       </section>
 
-      <!-- Sección Nosotros: Atelier & Filosofía Artesanal de Autor -->
-      <section class="w-full bg-surface-container-low border-t border-b border-on-surface/5 px-gutter-mobile md:px-gutter lg:px-margin py-20 sm:py-28 lg:py-36 relative overflow-hidden" id="nosotros">
-        <div class="max-w-7xl mx-auto space-y-16 sm:space-y-20">
-
-          <!-- Section Header: Centered & Editorial Elegance -->
-          <div class="text-center max-w-3xl mx-auto space-y-4">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-sans text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-xs">
-              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              Atelier & Filosofía de Autor
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-[1.12]">
-              El Arte de la Heladería de Origen
-            </h2>
-            <p class="font-sans text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed font-normal pt-2">
-              En <span class="font-bold text-on-surface">ARTECREAM</span> cada receta se concibe como una obra de arte culinaria. Rescatamos la despensa viva de Colombia mediante la técnica tradicional de mantecación lenta, celebrando la pureza del fruto silvestre y el trabajo digno campesino.
-            </p>
-          </div>
-
-          <!-- Three Core Pillars (Responsive 3-Column Grid) -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Sección Nosotros: Que es arte cream -->
+      <section class="w-full bg-surface-container-low border-t border-b border-on-surface/5 px-gutter-mobile md:px-gutter lg:px-margin py-16 sm:py-24 lg:py-28 relative overflow-hidden" id="nosotros">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
             
-            <!-- Pilar 1: Origen Silvestre y Comercio Directo -->
-            <div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-9 shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 border border-on-surface/5 flex flex-col justify-between group hover:-translate-y-1">
-              <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-                  <span class="material-symbols-outlined text-[28px]">eco</span>
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
-                  Cosecha de Origen
-                </h3>
-                <p class="font-sans text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                  Moras de Boyacá, lulos del Pacífico chocoano, maracuyás del Eje Cafetero y bocadillo veleño con denominación de origen. Compramos directamente a familias recolectoras para garantizar fruta viva en su punto de sazón.
-                </p>
-              </div>
-              <div class="pt-6 mt-6 border-t border-on-surface/5">
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-primary tracking-wide uppercase font-sans">
-                  <span class="material-symbols-outlined text-[16px]">verified</span>
-                  100% Ingredientes Colombianos
-                </span>
-              </div>
-            </div>
-
-            <!-- Pilar 2: Paciencia & Maduración en Frío -->
-            <div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-9 shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 border border-on-surface/5 flex flex-col justify-between group hover:-translate-y-1">
-              <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-                  <span class="material-symbols-outlined text-[28px]">hourglass_top</span>
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
-                  Mantecación Lenta
-                </h3>
-                <p class="font-sans text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                  Nuestras bases lácteas maduran en frío durante más de 12 horas. Este reposo artesanal estabiliza la emulsión de forma natural, otorgando una sedosidad densa e inolvidable con bajo aire inyectado.
-                </p>
-              </div>
-              <div class="pt-6 mt-6 border-t border-on-surface/5">
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-primary tracking-wide uppercase font-sans">
-                  <span class="material-symbols-outlined text-[16px]">ac_unit</span>
-                  12h+ Maduración Lenta
-                </span>
-              </div>
-            </div>
-
-            <!-- Pilar 3: Pureza Absoluta & Sostenibilidad -->
-            <div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-9 shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 border border-on-surface/5 flex flex-col justify-between group hover:-translate-y-1">
-              <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-                  <span class="material-symbols-outlined text-[28px]">nest_eco_leaf</span>
-                </div>
-                <h3 class="font-serif text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
-                  Pureza & Sostenibilidad
-                </h3>
-                <p class="font-sans text-sm sm:text-base text-on-surface-variant leading-relaxed">
-                  Cero colorantes artificiales, saborizantes sintéticos o grasas vegetales añadidas. Además, empacamos nuestros helados en recipientes 100% compostables y biodegradables que protegen nuestra tierra.
-                </p>
-              </div>
-              <div class="pt-6 mt-6 border-t border-on-surface/5">
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-primary tracking-wide uppercase font-sans">
-                  <span class="material-symbols-outlined text-[16px]">compost</span>
-                  Empaques 100% Biodegradables
-                </span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Editorial Manifesto & Artisanal Metrics Showcase -->
-          <div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-12 lg:p-14 border border-on-surface/5 shadow-elevation-1 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mt-12 sm:mt-16">
-            
-            <!-- Left: Atelier Manifesto Block -->
-            <div class="lg:col-span-7 space-y-6">
-              <div class="flex items-center gap-3">
-                <img src="brand-icon.png" alt="ARTECREAM Atelier" class="w-10 h-10 object-contain mix-blend-multiply">
-                <span class="font-serif text-xl font-bold text-primary tracking-tight">Atelier de Creación</span>
-              </div>
-              
-              <blockquote class="font-serif italic text-2xl sm:text-3xl text-on-surface leading-snug">
-                "No concebimos el helado como un simple postre, sino como una cápsula de memoria botánica que rinde homenaje a los aromas más puros de Colombia."
-              </blockquote>
-
-              <p class="font-sans text-sm sm:text-base text-on-surface-variant leading-relaxed font-normal">
-                Desde nuestro taller artesanal, formulamos recetas exclusivas en lotes pequeños garantizando frescura y equilibrio milimétrico de acidez, notas frutales y dulzura natural. Cada degustación es un viaje directo al territorio donde nació la fruta.
+            <!-- Columna de Texto Responsivo -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6 text-left">
+              <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-[1.15]">
+                Que es arte cream
+              </h2>
+              <p class="font-sans text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed font-normal">
+                En <span class="font-bold text-on-surface">ARTECREAM</span> cada receta se concibe como una obra de arte culinaria. Rescatamos la despensa viva de Colombia mediante la técnica tradicional de mantecación lenta, celebrando la pureza del fruto silvestre y el trabajo digno campesino.
               </p>
-
-              <div class="pt-2">
-                <a href="#sabores" class="inline-flex items-center justify-center gap-2 border border-primary text-primary hover:bg-primary hover:text-on-primary px-7 py-3 rounded-xl font-sans text-sm font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm">
-                  <span>Conocer Nuestras Recetas</span>
-                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </a>
-              </div>
             </div>
 
-            <!-- Right: 2x2 Artisanal Metrics Badge Grid -->
-            <div class="lg:col-span-5 grid grid-cols-2 gap-4 sm:gap-6">
-              
-              <div class="p-6 rounded-2xl bg-surface-container-low border border-on-surface/5 text-center flex flex-col items-center justify-center space-y-1.5">
-                <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">100%</span>
-                <span class="font-sans text-xs sm:text-sm font-semibold text-on-surface">Fruta Real</span>
-                <span class="font-sans text-[11px] text-on-surface-variant">Sin pulpas procesadas</span>
+            <!-- Columna de Imagen Responsiva -->
+            <div class="lg:col-span-5 w-full flex items-center justify-center">
+              <div class="relative w-full max-w-sm sm:max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover border border-on-surface/5 bg-surface-container-lowest flex items-center justify-center p-8 sm:p-10 group transition-all duration-300">
+                <img src="brand-icon.png" alt="ARTECREAM Helados Artesanales" class="w-36 sm:w-48 lg:w-56 h-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
               </div>
-
-              <div class="p-6 rounded-2xl bg-surface-container-low border border-on-surface/5 text-center flex flex-col items-center justify-center space-y-1.5">
-                <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">12h+</span>
-                <span class="font-sans text-xs sm:text-sm font-semibold text-on-surface">Reposo en Frío</span>
-                <span class="font-sans text-[11px] text-on-surface-variant">Textura sedosa de autor</span>
-              </div>
-
-              <div class="p-6 rounded-2xl bg-surface-container-low border border-on-surface/5 text-center flex flex-col items-center justify-center space-y-1.5">
-                <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">0%</span>
-                <span class="font-sans text-xs sm:text-sm font-semibold text-on-surface">Colorantes</span>
-                <span class="font-sans text-[11px] text-on-surface-variant">Tonos 100% naturales</span>
-              </div>
-
-              <div class="p-6 rounded-2xl bg-surface-container-low border border-on-surface/5 text-center flex flex-col items-center justify-center space-y-1.5">
-                <span class="font-serif text-3xl sm:text-4xl font-bold text-primary">4</span>
-                <span class="font-sans text-xs sm:text-sm font-semibold text-on-surface">Obras de Autor</span>
-                <span class="font-sans text-[11px] text-on-surface-variant">Colección botánica</span>
-              </div>
-
             </div>
 
           </div>
-
         </div>
       </section>
 
