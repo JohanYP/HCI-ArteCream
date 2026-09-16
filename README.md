@@ -25,7 +25,8 @@ HCI-ArteCream/
 │   ├── product.js           # Controlador de la vista de producto (pages/producto.html)
 │   └── tailwind-config.js   # Tokens de diseño y colores centralizados de Tailwind CSS
 ├── pages/
-│   └── producto.html        # Vista de detalle de sabor parametrizada (?id=...)
+│   ├── producto.html        # Vista de detalle de sabor parametrizada (?id=...)
+│   └── legal.html           # Términos de servicio y política de privacidad
 ├── 404.html                 # Pantalla 404 de error con branding para GitHub Pages
 ├── index.html               # Landing page principal
 ├── DESIGN.md                # Guía de tokens de diseño y tipografías (Material Design 3)
@@ -49,7 +50,7 @@ El diseño sigue una estética editorial de alta gama descrita en [`DESIGN.md`](
 ## 🚀 Funcionalidades Clave
 
 1. **Catálogo de Autor Dinámico:**
-   * Las cartas de sabores en la página de inicio se generan dinámicamente desde `js/data/flavors.js` con tags de origen colombiano (*Guayaba Veleña*, *Chocó Biogeográfico*, *Mora de Castilla*, *Eje Cafetero*).
+   * Las cartas de sabores en la página de inicio se generan dinámicamente desde `js/data/flavors.js` con fotos limpias y notas de origen colombiano (*Santander*, *Chocó*, *Boyacá*, *Eje Cafetero*).
 2. **Cesta Térmica Deslizable (*Slide-over Drawer*):**
    * Panel lateral interactivo con subtotal calculado en pesos colombianos (`$ COP`), control de unidades (`+` / `-`) y persistencia en `localStorage`.
 3. **Membresía "Club de Cata":**

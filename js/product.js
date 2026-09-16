@@ -80,14 +80,6 @@ function renderOtherFlavors() {
     card.innerHTML = `
       <div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
         <img src="${imageSrc}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl group-hover:scale-105 transition-transform duration-300">
-        ${item.badge ? `
-          <div class="absolute top-4 left-4 z-10">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md text-[11px] font-bold text-primary shadow-sm border border-on-surface/5 tracking-wide uppercase">
-              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-              ${item.badge}
-            </span>
-          </div>
-        ` : ''}
       </div>
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
         <div class="min-h-[3.5rem] sm:min-h-[4rem] flex flex-col justify-start">

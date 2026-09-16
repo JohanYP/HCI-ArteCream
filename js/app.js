@@ -26,19 +26,9 @@ function renderCatalogGrid() {
     card.setAttribute('aria-label', `Ver descripción de ${item.name}`);
 
     card.innerHTML = `
-      <!-- Card Image Container with Badge -->
+      <!-- Card Image Container -->
       <div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
         <img alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl group-hover:scale-105 transition-transform duration-300" src="${item.img}">
-        
-        <!-- Gourmet Origin Badge -->
-        ${item.badge ? `
-          <div class="absolute top-4 left-4 z-10">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md text-[11px] font-bold text-primary shadow-sm border border-on-surface/5 tracking-wide uppercase">
-              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-              ${item.badge}
-            </span>
-          </div>
-        ` : ''}
       </div>
 
       <!-- Card Info -->
