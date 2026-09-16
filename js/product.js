@@ -38,7 +38,8 @@ function initPage() {
 
   const imgEl = document.getElementById('flavor-image');
   if (imgEl) {
-    imgEl.src = flavor.img;
+    const mainImageSrc = flavor.img.startsWith('assets/') ? '../' + flavor.img : flavor.img;
+    imgEl.src = mainImageSrc;
     imgEl.alt = 'Helado artesanal ' + flavor.name;
   }
 
@@ -70,6 +71,7 @@ function renderOtherFlavors() {
   Object.keys(FLAVORS_DATA).forEach(key => {
     if (key === selectedFlavorId) return;
     const item = FLAVORS_DATA[key];
+    const imageSrc = item.img.startsWith('assets/') ? '../' + item.img : item.img;
 
     const card = document.createElement('a');
     card.href = 'producto.html?id=' + encodeURIComponent(key);
@@ -77,7 +79,7 @@ function renderOtherFlavors() {
     card.setAttribute('aria-label', 'Ver descripción de ' + item.name);
     card.innerHTML = `
       <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-        <img src="${item.img}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl">
+        <img src="${imageSrc}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl">
       </div>
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
         <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">

@@ -7,7 +7,7 @@ let currentModalQty = 1;
 
 // Product detail navigation
 function openFlavorPage(flavorId) {
-  window.location.href = 'producto.html?id=' + encodeURIComponent(flavorId);
+  window.location.href = 'pages/producto.html?id=' + encodeURIComponent(flavorId);
 }
 
 // Quick preview modal (if opened from landing page cards)
