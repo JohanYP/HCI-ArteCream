@@ -4,6 +4,8 @@ const FLAVORS_DATA = {
   'queso-bocadillo': {
     id: 'queso-bocadillo',
     name: 'Queso con bocadillo',
+    badge: 'Guayaba Veleña',
+    origin: 'Santander & Boyacá',
     price: 8500,
     priceFormatted: '$8.500 COP',
     img: 'assets/images/flavor-queso-bocadillo.png',
@@ -12,6 +14,8 @@ const FLAVORS_DATA = {
   'lulo': {
     id: 'lulo',
     name: 'Lulo',
+    badge: '100% Fruta Silvestre',
+    origin: 'Chocó Biogeográfico',
     price: 8000,
     priceFormatted: '$8.000 COP',
     img: 'assets/images/flavor-lulo.png',
@@ -20,6 +24,8 @@ const FLAVORS_DATA = {
   'mora': {
     id: 'mora',
     name: 'Mora',
+    badge: 'Mora de Castilla',
+    origin: 'Campos de Boyacá',
     price: 8000,
     priceFormatted: '$8.000 COP',
     img: 'assets/images/flavor-mora.jpg',
@@ -28,6 +34,8 @@ const FLAVORS_DATA = {
   'maracuya': {
     id: 'maracuya',
     name: 'Maracuyá',
+    badge: 'Cosecha Tropical',
+    origin: 'Eje Cafetero',
     price: 8000,
     priceFormatted: '$8.000 COP',
     img: 'assets/images/flavor-maracuya.jpg',
@@ -35,5 +43,5 @@ const FLAVORS_DATA = {
   }
 };
 
-// Compatibilidad en caso de que algún script use FLAVORS_CATALOG
+// Compatibilidad
 const FLAVORS_CATALOG = FLAVORS_DATA;
