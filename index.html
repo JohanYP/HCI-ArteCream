@@ -119,7 +119,7 @@
       <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
         <!-- Artisanal Brand Icon -->
         <a href="#inicio" class="flex items-center gap-2.5 group" aria-label="Inicio ARTECREAM">
-          <img src="brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
+          <img src="assets/images/brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
           <span class="font-serif text-2xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">ARTECREAM</span>
         </a>
       </div>
@@ -143,8 +143,9 @@
         </button>
         <!-- Shopping Bag in Vinotinto (#5b0023 / text-primary) -->
         <a aria-label="Bolsa de compras" class="relative w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" data-path="pedidos" href="#sabores" onclick="addToOrder('Cesta de autor', 0, 0)">
-          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
-          <span id="cart-counter" class="absolute -top-1 -right-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary text-on-primary font-sans text-[11px] font-bold shadow-sm transition-transform duration-200">0</span>
+          <span class="material-symbols-outlined text-[26px]">local_mall</span>
+          <!-- Dynamic Cart Counter Badge -->
+          <span id="cart-counter" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary text-on-primary font-sans font-bold text-xs flex items-center justify-center scale-0 transition-transform duration-200 shadow-sm">0</span>
         </a>
       </div>
 
@@ -165,7 +166,7 @@
       <!-- Hero Section (UN SABOR QUE SE QUEDA in EB Garamond & Vinotinto, lifted 30px, square button in Montserrat) -->
       <section id="inicio" class="relative w-full aspect-[20/9] min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] overflow-hidden bg-surface-container-low flex items-center">
         <div class="absolute inset-0 pointer-events-none z-0">
-          <img src="Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center">
+          <img src="assets/images/Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center">
         </div>
         <div class="absolute inset-0 z-10 flex items-center px-gutter-mobile md:px-gutter lg:px-margin">
           <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
@@ -204,7 +205,7 @@
             <!-- Helado 1: Queso con bocadillo -->
             <a href="producto.html?id=queso-bocadillo" class="flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 cursor-pointer hover:-translate-y-1.5 h-full" aria-label="Ver descripción de Queso con bocadillo">
               <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-                <img alt="Helado artesanal Queso con bocadillo" class="w-full h-full object-cover object-center rounded-t-3xl" src="flavor-queso-bocadillo.png">
+                <img alt="Helado artesanal Queso con bocadillo" class="w-full h-full object-cover object-center rounded-t-3xl" src="assets/images/flavor-queso-bocadillo.png">
               </div>
               <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
                 <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
@@ -227,7 +228,7 @@
             <!-- Helado 2: Lulo -->
             <a href="producto.html?id=lulo" class="flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 cursor-pointer hover:-translate-y-1.5 h-full" aria-label="Ver descripción de Lulo">
               <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-                <img alt="Helado artesanal Lulo" class="w-full h-full object-cover object-center rounded-t-3xl" src="flavor-lulo.png">
+                <img alt="Helado artesanal Lulo" class="w-full h-full object-cover object-center rounded-t-3xl" src="assets/images/flavor-lulo.png">
               </div>
               <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
                 <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
@@ -250,7 +251,7 @@
             <!-- Helado 3: Mora -->
             <a href="producto.html?id=mora" class="flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 cursor-pointer hover:-translate-y-1.5 h-full" aria-label="Ver descripción de Mora">
               <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-                <img alt="Helado artesanal Mora" class="w-full h-full object-cover object-center rounded-t-3xl" src="flavor-mora.jpg">
+                <img alt="Helado artesanal Mora" class="w-full h-full object-cover object-center rounded-t-3xl" src="assets/images/flavor-mora.jpg">
               </div>
               <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
                 <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
@@ -273,7 +274,7 @@
             <!-- Helado 4: Maracuyá -->
             <a href="producto.html?id=maracuya" class="flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 cursor-pointer hover:-translate-y-1.5 h-full" aria-label="Ver descripción de Maracuyá">
               <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-                <img alt="Helado artesanal Maracuyá" class="w-full h-full object-cover object-center rounded-t-3xl" src="flavor-maracuya.jpg">
+                <img alt="Helado artesanal Maracuyá" class="w-full h-full object-cover object-center rounded-t-3xl" src="assets/images/flavor-maracuya.jpg">
               </div>
               <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
                 <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
@@ -393,7 +394,10 @@
 
     </div>
 
-    <!-- Application Script -->
+    <!-- Modular Application Scripts -->
+    <script src="js/data/flavors.js"></script>
+    <script src="js/modules/responsive.js"></script>
+    <script src="js/modules/cart.js"></script>
     <script src="js/app.js"></script>
   </main>
 

@@ -113,7 +113,7 @@
       <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
         <!-- Artisanal Brand Icon -->
         <a href="index.html" class="flex items-center gap-2.5 group" aria-label="Inicio ARTECREAM">
-          <img src="brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
+          <img src="assets/images/brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
           <span class="font-serif text-2xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">ARTECREAM</span>
         </a>
       </div>
@@ -257,171 +257,10 @@
     </div>
   </footer>
 
-  <script>
-    const FLAVORS_CATALOG = {
-      'queso-bocadillo': {
-        name: 'Queso con bocadillo',
-        price: 8500,
-        priceFormatted: '$8.500 COP',
-        img: 'flavor-queso-bocadillo.png',
-        desc: 'Cremosa base láctea elaborada con leche de pastoreo sostenible y queso campesino fresco de Santander, veteada generosamente con trozos de auténtico bocadillo veleño de guayaba roja. El contraste perfecto entre notas dulces acarameladas y el toque lácteo salino tradicional.'
-      },
-      'lulo': {
-        name: 'Lulo',
-        price: 8000,
-        priceFormatted: '$8.000 COP',
-        img: 'flavor-lulo.png',
-        desc: 'Puro sorbete artesanal a base de pulpa fresca de lulos silvestres cosechados en el Pacífico chocoano. Su perfil intensamente cítrico y refrescante equilibra la acidez viva de la fruta con notas herbales y una textura ligera que limpia el paladar.'
-      },
-      'mora': {
-        name: 'Mora',
-        price: 8000,
-        priceFormatted: '$8.000 COP',
-        img: 'flavor-mora.jpg',
-        desc: 'Reducción artesanal a fuego lento de moras de Castilla cosechadas en altura en los campos de Boyacá. Posee una untuosidad sedosa inconfundible, color rubí oscuro y un sabor profundo con notas a frutos del bosque silvestres.'
-      },
-      'maracuya': {
-        name: 'Maracuyá',
-        price: 8000,
-        priceFormatted: '$8.000 COP',
-        img: 'flavor-maracuya.jpg',
-        desc: 'Elaborado con maracuyá madurado bajo el sol del Eje Cafetero, conservando sus semillas crujientes para una experiencia multisensorial. Aromático, chispeante y con el balance exacto entre acidez tropical y frescura revitalizante.'
-      }
-    };
-
-    let selectedFlavorId = 'queso-bocadillo';
-    let currentQty = 1;
-    let cartTotalItems = 0;
-
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    function initPage() {
-      const paramId = getQueryParam('id') || getQueryParam('sabor') || 'queso-bocadillo';
-      if (FLAVORS_CATALOG[paramId]) {
-        selectedFlavorId = paramId;
-      }
-
-      const flavor = FLAVORS_CATALOG[selectedFlavorId];
-      document.title = flavor.name + ' | ARTECREAM';
-      document.getElementById('page-title').textContent = flavor.name + ' | ARTECREAM';
-      document.getElementById('breadcrumb-title').textContent = flavor.name;
-      document.getElementById('flavor-title').textContent = flavor.name;
-      document.getElementById('flavor-price').textContent = flavor.priceFormatted;
-      document.getElementById('flavor-description').textContent = flavor.desc;
-      
-      const imgEl = document.getElementById('flavor-image');
-      imgEl.src = flavor.img;
-      imgEl.alt = 'Helado artesanal ' + flavor.name;
-
-      renderOtherFlavors();
-    }
-
-    // Render Other Flavors with the exact elongated aspect of the landing page
-    function renderOtherFlavors() {
-      const grid = document.getElementById('other-flavors-grid');
-      grid.innerHTML = '';
-
-      Object.keys(FLAVORS_CATALOG).forEach(key => {
-        if (key === selectedFlavorId) return;
-        const item = FLAVORS_CATALOG[key];
-
-        const card = document.createElement('a');
-        card.href = 'producto.html?id=' + key;
-        card.className = 'flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 hover:-translate-y-1.5 h-full cursor-pointer';
-        card.setAttribute('aria-label', 'Ver descripción de ' + item.name);
-        card.innerHTML = `
-          <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-            <img src="${item.img}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl">
-          </div>
-          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
-            <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
-              <h3 class="font-sans text-xl sm:text-2xl font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">
-                ${item.name}
-              </h3>
-            </div>
-            <div class="flex items-center justify-between pt-3 border-t border-on-surface/5 mt-auto">
-              <div>
-                <span class="font-sans text-xl font-bold text-on-surface">${item.priceFormatted}</span>
-              </div>
-              <!-- Square cart button with rounded borders -->
-              <button class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:scale-105 active:scale-95 transition-all duration-200" onclick="event.preventDefault(); event.stopPropagation(); addOtherToCart('${item.name}', ${item.price});" title="Agregar al pedido" type="button">
-                <span class="material-symbols-outlined text-[22px]">add_shopping_cart</span>
-              </button>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const btn = document.getElementById('menu-toggle');
-      if (!menu || !btn) return;
-      const icon = btn.querySelector('.material-symbols-outlined');
-      const isOpen = menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-      if (icon) icon.textContent = isOpen ? 'menu' : 'close';
-    }
-
-    function changeQuantity(delta) {
-      currentQty = Math.max(1, currentQty + delta);
-      document.getElementById('product-quantity').textContent = currentQty;
-    }
-
-    let toastTimer;
-    function showToast(titleText, descText) {
-      const toast = document.getElementById('cart-toast');
-      const title = document.getElementById('toast-title');
-      const desc = document.getElementById('toast-desc');
-
-      if (title) title.textContent = titleText;
-      if (desc) desc.textContent = descText;
-
-      if (toast) {
-        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-        toast.classList.add('translate-y-0', 'opacity-100');
-
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
-          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-          toast.classList.remove('translate-y-0', 'opacity-100');
-        }, 3200);
-      }
-    }
-
-    function updateCartCounter(addedQty) {
-      cartTotalItems += addedQty;
-      const cartCounter = document.getElementById('cart-counter');
-      if (cartCounter) {
-        cartCounter.textContent = cartTotalItems;
-        cartCounter.classList.remove('scale-0');
-        cartCounter.classList.add('scale-100');
-      }
-    }
-
-    function submitOrder() {
-      const flavor = FLAVORS_CATALOG[selectedFlavorId];
-      const totalPrice = flavor.price * currentQty;
-      updateCartCounter(currentQty);
-      showToast(
-        `${flavor.name} (${currentQty} un.)`,
-        '$' + totalPrice.toLocaleString('es-CO') + ' COP añadido a la cesta.'
-      );
-    }
-
-    function addOtherToCart(name, price) {
-      updateCartCounter(1);
-      showToast(
-        name,
-        '$' + price.toLocaleString('es-CO') + ' COP añadido a la cesta.'
-      );
-    }
-
-    window.addEventListener('DOMContentLoaded', initPage);
-  </script>
+  <!-- Modular Application Scripts -->
+  <script src="js/data/flavors.js"></script>
+  <script src="js/modules/responsive.js"></script>
+  <script src="js/modules/cart.js"></script>
+  <script src="js/product.js"></script>
 </body>
 </html>
