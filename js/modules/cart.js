@@ -92,13 +92,8 @@ const CartService = {
     const badges = document.querySelectorAll('#cart-counter');
     badges.forEach((badge) => {
       badge.textContent = totalCount;
-      if (totalCount > 0) {
-        badge.classList.remove('scale-0');
-        badge.classList.add('scale-100');
-      } else {
-        badge.classList.remove('scale-100');
-        badge.classList.add('scale-0');
-      }
+      badge.classList.remove('scale-0');
+      badge.classList.add('scale-100');
     });
   },
 

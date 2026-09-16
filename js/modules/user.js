@@ -52,7 +52,7 @@ const UserService = {
                 <span class="material-symbols-outlined text-2xl">workspace_premium</span>
               </div>
               <div>
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-on-surface leading-tight">Club de Cata</h3>
+                <h3 class="font-sans text-xl sm:text-2xl font-bold text-on-surface leading-tight">Club de Cata</h3>
                 <p class="text-xs text-on-surface-variant">Experiencia de Autor ARTECREAM</p>
               </div>
             </div>

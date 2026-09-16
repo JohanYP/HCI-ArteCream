@@ -17,50 +17,59 @@
 </head>
 <body class="bg-surface text-on-surface font-sans antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
 
-  <!-- Single Global Header / Navigation Bar (Identical to Landing Page) -->
-  <header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md border-b border-on-surface/10 shadow-elevation-1 transition-colors">
-    <div class="h-20 w-full px-gutter-mobile md:px-gutter lg:px-margin flex items-center justify-between gap-3 sm:gap-space-md">
+  <!-- Single Global Header / Navigation Bar (Matches Artecream reference layout) -->
+  <header class="fixed top-0 w-full z-40 bg-surface/95 backdrop-blur-md border-b border-on-surface/5 shadow-elevation-1 transition-colors">
+    <div class="h-20 sm:h-24 w-full px-6 sm:px-10 lg:px-16 flex items-center justify-between relative">
       
-      <!-- Brand Logo & Name (ARTECREAM in EB Garamond) -->
-      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
-        <!-- Artisanal Brand Icon -->
-        <a href="../index.html" class="flex items-center gap-2.5 group" aria-label="Inicio ARTECREAM">
-          <img src="../assets/images/brand-icon.png" alt="Logo ARTECREAM" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-105 transition-transform shrink-0 mix-blend-multiply">
-          <span class="font-serif text-2xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">ARTECREAM</span>
+      <!-- Brand Logo (Pure Artecream Logo with underline & droplet) -->
+      <div class="flex items-center shrink-0">
+        <a href="../index.html#inicio" class="flex items-center group" aria-label="Inicio Artecream">
+          <img src="../assets/images/logo-artecream.png" alt="Artecream" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105">
         </a>
       </div>
 
-      <!-- Navigation Links (Montserrat) -->
-      <nav id="desktop-nav" class="hidden lg:flex items-center gap-space-lg font-sans text-sm font-semibold">
-        <a class="text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/50 pb-1 border-b-2 border-transparent transition-all" data-path="inicio" href="../index.html">Inicio</a>
-        <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors" data-path="sabores" href="../index.html#sabores">Sabores</a>
-        <a class="text-on-surface-variant hover:text-primary hover:border-b-2 hover:border-primary/50 pb-1 border-b-2 border-transparent transition-all" data-path="nosotros" href="../index.html#nosotros">Nosotros</a>
+      <!-- Navigation Links (Centered, Montserrat) -->
+      <nav id="desktop-nav" class="hidden lg:flex items-center gap-10 font-sans text-sm sm:text-base font-semibold absolute left-1/2 -translate-x-1/2">
+        <a class="nav-link text-on-surface font-medium hover:text-primary transition-colors pb-1" data-path="inicio" href="../index.html">Inicio</a>
+        <a aria-current="page" class="nav-link text-primary font-bold border-b-2 border-primary pb-1 transition-colors" data-path="sabores" href="../index.html#sabores">Sabores</a>
+        <a class="nav-link text-on-surface font-medium hover:text-primary transition-colors pb-1" data-path="nosotros" href="../index.html#nosotros">Nosotros</a>
       </nav>
 
-      <!-- Mobile Menu Toggle Button -->
-      <button aria-label="Abrir menú" class="lg:hidden w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors shrink-0 p-1.5" id="menu-toggle" onclick="toggleMobileMenu()" type="button" aria-expanded="false">
-        <span class="material-symbols-outlined text-[24px]">menu</span>
-      </button>
+      <!-- Right Action Items: Phone, User Profile & Shopping Bag with 0 Counter -->
+      <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+        <!-- Direct Phone / Contact Action -->
+        <a href="tel:+573001234567" aria-label="Llamar o contacto" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1" title="Contacto directo">
+          <span class="material-symbols-outlined text-[24px]">call</span>
+        </a>
 
-      <!-- Right Action Items: User Profile & Vinotinto Shopping Bag -->
-      <div class="flex items-center gap-1 sm:gap-space-md shrink-0">
-        <button aria-label="Perfil de usuario" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" onclick="UserService.openModal()" type="button">
+        <!-- User Profile / Club de Cata -->
+        <button aria-label="Perfil de usuario" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1" onclick="UserService.openModal()" type="button" title="Club de Cata">
           <span class="material-symbols-outlined text-[26px]">person</span>
         </button>
-        <!-- Shopping Bag in Vinotinto (#5b0023 / text-primary) -->
-        <button aria-label="Bolsa de compras" class="relative w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" onclick="CartService.openDrawer()" type="button">
-          <span class="material-symbols-outlined text-[26px]">local_mall</span>
-          <span id="cart-counter" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary text-on-primary font-sans font-bold text-xs flex items-center justify-center scale-0 transition-transform duration-200 shadow-sm">0</span>
+
+        <!-- Shopping Bag in Vinotinto with Dynamic Counter Badge -->
+        <button aria-label="Bolsa de compras" class="relative w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1" onclick="CartService.openDrawer()" type="button" title="Ver cesta de compras">
+          <span class="material-symbols-outlined text-[26px]">shopping_bag</span>
+          <span id="cart-counter" class="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full bg-primary text-on-primary font-sans font-bold text-[10px] flex items-center justify-center shadow-sm">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button aria-label="Abrir menú" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors shrink-0 p-1" id="menu-toggle" onclick="toggleMobileMenu()" type="button" aria-expanded="false">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
         </button>
       </div>
 
     </div>
 
     <!-- Mobile Drawer Menu (Montserrat) -->
-    <nav id="mobile-menu" class="lg:hidden hidden flex flex-col gap-1 px-gutter-mobile md:px-gutter pt-2 pb-4 bg-surface/95 backdrop-blur-md border-t border-on-surface/10 shadow-elevation-2 font-sans" aria-label="Menú principal">
-      <a class="rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="inicio" href="../index.html">Inicio</a>
-      <a class="rounded-xl px-4 py-3 text-sm font-bold bg-primary-container text-on-primary transition-colors" data-path="sabores" href="../index.html#sabores">Sabores</a>
-      <a class="rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="nosotros" href="../index.html#nosotros">Nosotros</a>
+    <nav id="mobile-menu" class="lg:hidden hidden flex flex-col gap-1 px-6 pt-2 pb-4 bg-surface/95 backdrop-blur-md border-t border-on-surface/10 shadow-elevation-2 font-sans" aria-label="Menú principal">
+      <a class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="inicio" href="../index.html" onclick="toggleMobileMenu()">Inicio</a>
+      <a aria-current="page" class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-bold bg-primary-container text-on-primary transition-colors" data-path="sabores" href="../index.html#sabores" onclick="toggleMobileMenu()">Sabores</a>
+      <a class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="nosotros" href="../index.html#nosotros" onclick="toggleMobileMenu()">Nosotros</a>
+      <a class="mobile-nav-link rounded-xl px-4 py-3 text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2" href="tel:+573001234567" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">call</span>
+        <span>Llamar / Contacto (+57 300 123 4567)</span>
+      </a>
     </nav>
   </header>
 
@@ -162,8 +171,8 @@
     <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter lg:px-margin flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-inverse-on-surface/70 font-sans">
       <p>© 2025 ARTECREAM Helados Artesanales de Autor. Todos los derechos reservados.</p>
       <div class="flex items-center gap-6">
-        <a class="hover:text-inverse-on-surface transition-colors" data-path="privacidad" href="legal.html#privacidad">Política de Privacidad</a>
-        <a class="hover:text-inverse-on-surface transition-colors" data-path="terminos" href="legal.html#terminos">Términos de Servicio</a>
+        <a class="hover:text-inverse-on-surface transition-colors" data-path="privacidad" href="privacidad.html">Política de Privacidad</a>
+        <a class="hover:text-inverse-on-surface transition-colors" data-path="terminos" href="terminos.html">Términos de Servicio</a>
       </div>
     </div>
   </footer>
