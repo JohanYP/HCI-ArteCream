@@ -44,7 +44,7 @@
 
       <!-- Right Action Items: User Profile & Vinotinto Shopping Bag -->
       <div class="flex items-center gap-1 sm:gap-space-md shrink-0">
-        <button aria-label="Perfil de usuario" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" type="button">
+        <button aria-label="Perfil de usuario" class="w-10 h-10 flex items-center justify-center text-primary hover:text-primary-container transition-colors transform active:scale-95 shrink-0 p-1.5" onclick="UserService.openModal()" type="button">
           <span class="material-symbols-outlined text-[26px]">person</span>
         </button>
         <!-- Shopping Bag in Vinotinto (#5b0023 / text-primary) -->
@@ -173,6 +173,7 @@
   <script src="../js/data/flavors.js"></script>
   <script src="../js/modules/responsive.js"></script>
   <script src="../js/modules/cart.js"></script>
+  <script src="../js/modules/user.js"></script>
   <script src="../js/product.js"></script>
 </body>
 </html>
