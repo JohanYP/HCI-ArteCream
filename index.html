@@ -70,15 +70,15 @@
     <div class="flex flex-col w-full">
 
       <!-- Hero Section (UN SABOR QUE SE QUEDA in EB Garamond & Vinotinto, lifted 30px, square button in Montserrat) -->
-      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] overflow-hidden bg-surface-container-low flex items-center">
+      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] xl:min-h-[640px] overflow-hidden bg-surface-container-low flex items-center">
         <div class="absolute inset-0 pointer-events-none z-0">
-          <img src="assets/images/Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center">
+          <img src="assets/images/Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center lg:object-right xl:object-[85%_center]">
         </div>
         <div class="absolute inset-0 z-10 flex items-center px-gutter-mobile md:px-gutter lg:px-margin">
           <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
             
-            <!-- Hero Headline Block: Lifted on desktop, balanced on mobile -->
-            <div class="lg:col-span-7 flex flex-col items-start space-y-space-md -translate-y-4 sm:-translate-y-[30px]">
+            <!-- Hero Headline Block: Lifted on desktop, balanced on mobile, constrained width so it never touches the ice creams -->
+            <div class="lg:col-span-6 xl:col-span-5 max-w-lg lg:max-w-md xl:max-w-lg flex flex-col items-start space-y-space-md -translate-y-4 sm:-translate-y-[30px]">
               
               <!-- Title: 100% in EB Garamond and Vinotinto (#5b0023 / text-primary) -->
               <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight text-primary leading-[1.04]">
@@ -96,7 +96,7 @@
               </div>
 
             </div>
-            <div class="lg:col-span-5 hidden lg:block"></div>
+            <div class="lg:col-span-6 xl:col-span-7 hidden lg:block"></div>
           </div>
         </div>
       </section>
