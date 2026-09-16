@@ -78,8 +78,8 @@ function renderOtherFlavors() {
     card.className = 'flavor-card group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-elevation-1 hover:shadow-elevation-hover transition-all duration-300 flex flex-col border border-on-surface/5 hover:-translate-y-1.5 h-full cursor-pointer';
     card.setAttribute('aria-label', 'Ver descripción de ' + item.name);
     card.innerHTML = `
-      <div class="relative w-full h-72 sm:h-80 bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
-        <img src="${imageSrc}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl">
+      <div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden shrink-0 rounded-t-3xl">
+        <img src="${imageSrc}" alt="Helado artesanal ${item.name}" class="w-full h-full object-cover object-center rounded-t-3xl group-hover:scale-105 transition-transform duration-300">
       </div>
       <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between font-sans">
         <div class="min-h-[3.5rem] sm:min-h-[4rem] flex items-start">
