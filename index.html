@@ -70,33 +70,31 @@
     <div class="flex flex-col w-full">
 
       <!-- Hero Section (UN SABOR QUE SE QUEDA in EB Garamond & Vinotinto, lifted 30px, square button in Montserrat) -->
-      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[380px] sm:min-h-[480px] lg:min-h-[580px] xl:min-h-[640px] overflow-hidden bg-surface-container-low flex items-center">
+      <section id="inicio" class="relative w-full aspect-[20/9] min-h-[420px] sm:min-h-[480px] lg:min-h-[580px] xl:min-h-[640px] overflow-hidden bg-surface-container-low flex items-center">
+        <!-- Background Hero Image: Permanently anchored to the right on desktop/wide displays -->
         <div class="absolute inset-0 pointer-events-none z-0">
-          <img src="assets/images/Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover object-center lg:object-right xl:object-[85%_center]">
+          <img src="assets/images/Hero.webp" alt="Fondo Hero Artecream" class="w-full h-full object-cover" style="object-position: right center;">
         </div>
-        <div class="absolute inset-0 z-10 flex items-center px-gutter-mobile md:px-gutter lg:px-margin">
-          <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+
+        <!-- Hero Content Layer: Left-aligned with container margins so it stays in the empty negative space -->
+        <div class="relative z-10 w-full px-gutter-mobile md:px-gutter lg:px-16 xl:px-24 2xl:px-32 flex items-center">
+          <div class="w-full max-w-md sm:max-w-lg lg:max-w-xl flex flex-col items-start space-y-space-md -translate-y-4 sm:-translate-y-[24px] lg:-translate-y-[30px]">
             
-            <!-- Hero Headline Block: Lifted on desktop, balanced on mobile, constrained width so it never touches the ice creams -->
-            <div class="lg:col-span-6 xl:col-span-5 max-w-lg lg:max-w-md xl:max-w-lg flex flex-col items-start space-y-space-md -translate-y-4 sm:-translate-y-[30px]">
-              
-              <!-- Title: 100% in EB Garamond and Vinotinto (#5b0023 / text-primary) -->
-              <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight text-primary leading-[1.04]">
-                <span class="block font-bold leading-none text-primary">UN SABOR</span>
-                <span class="block font-bold leading-none -mt-1 sm:-mt-2 text-primary">QUE SE&nbsp;</span>
-                <span class="block font-bold leading-none -mt-0.5 sm:-mt-1 text-primary">QUEDA</span>
-              </h1>
+            <!-- Title: 100% in EB Garamond and Vinotinto (#5b0023 / text-primary) -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[68px] font-bold tracking-tight text-primary leading-[1.04]">
+              <span class="block font-bold leading-none text-primary">UN SABOR</span>
+              <span class="block font-bold leading-none -mt-1 sm:-mt-2 text-primary">QUE SE&nbsp;</span>
+              <span class="block font-bold leading-none -mt-0.5 sm:-mt-1 text-primary">QUEDA</span>
+            </h1>
 
-              <!-- Explorar Sabores Button: Square with rounded borders (rounded-xl), no background (bg-transparent), Montserrat font -->
-              <div class="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
-                <a class="inline-flex items-center justify-center gap-space-xs border border-primary text-primary hover:bg-primary hover:text-on-primary px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-transparent font-sans text-sm sm:text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm" href="#sabores">
-                  <span>Explorar Sabores</span>
-                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-                </a>
-              </div>
-
+            <!-- Explorar Sabores Button: Square with rounded borders (rounded-xl), no background (bg-transparent), Montserrat font -->
+            <div class="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
+              <a class="inline-flex items-center justify-center gap-space-xs border border-primary text-primary hover:bg-primary hover:text-on-primary px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl bg-transparent font-sans text-sm sm:text-base font-semibold transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm" href="#sabores">
+                <span>Explorar Sabores</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </a>
             </div>
-            <div class="lg:col-span-6 xl:col-span-7 hidden lg:block"></div>
+
           </div>
         </div>
       </section>
